@@ -1,3 +1,36 @@
-h1 {
-  color: red;
+html {
+  font-family: $font-main;
+  font-size: 16px;
+}
+
+body {
+  // overflow-y: scroll;
+
+  color: $color-gray;
+  font-family: $font-main;
+}
+
+section {
+  overflow: hidden;
+
+  width: 100%;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-dark;
+
+  font-family: $font-main;
 }

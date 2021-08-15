@@ -3,6 +3,129 @@
 /* md */
 /* sm */
 /* xs */
-h1 {
-  color: red;
+a {
+  color: #010101;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: #ee3b24;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item {
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+.navbar-expand-lg .navbar-nav .nav-item .nav-link {
+  color: #fefefe;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(254, 254, 254, 0.75);
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.slider__item {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.slider__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.slider__title {
+  color: #fefefe;
+  font-size: 1.75rem;
+}
+
+.header-navbar {
+  -webkit-transition: background-color 0.5s, padding 0.25s;
+  -o-transition: background-color 0.5s, padding 0.25s;
+  transition: background-color 0.5s, padding 0.25s;
+}
+.header-navbar .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+.header-navbar .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  content: "";
+  opacity: 0;
+  background-color: #fefefe;
+}
+
+.header-navbar--scrolled .active .nav-link {
+  color: #ee3b24 !important;
+  text-shadow: 0 0 1px #ee3b24;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.navbar-nav {
+  font-size: 1rem;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  color: #545454;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  overflow: hidden;
+  width: 100%;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #010101;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 992px) {
+  .header-navbar {
+    padding: 15px 0;
+    background-color: transparent;
+  }
+  .header-navbar .nav-link::after {
+    left: 0;
+    width: 100%;
+  }
+  .header-navbar .nav-link {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }

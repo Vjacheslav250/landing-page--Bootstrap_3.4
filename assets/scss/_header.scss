@@ -1,0 +1,50 @@
+.header-navbar {
+  -webkit-transition: background-color 0.5s, padding 0.25s;
+  -o-transition: background-color 0.5s, padding 0.25s;
+  transition: background-color 0.5s, padding 0.25s;
+
+  @include lg-min {
+    padding: 15px 0;
+    background-color: transparent;
+  }
+
+  .nav-link {
+    &::after {
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      content: "";
+      opacity: 0;
+      background-color: $color-light;
+
+      @include lg-min {
+        left: 0;
+        width: 100%;
+      }
+    }
+    @include lg-min {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.header-navbar--scrolled .active .nav-link {
+  color: #ee3b24 !important;
+  text-shadow: 0 0 1px #ee3b24;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.navbar-nav {
+  font-size: 1rem;
+}
