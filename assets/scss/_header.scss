@@ -1,33 +1,40 @@
 .header-navbar {
   -webkit-transition: background-color 0.5s, padding 0.25s;
-  -o-transition: background-color 0.5s, padding 0.25s;
-  transition: background-color 0.5s, padding 0.25s;
+       -o-transition: background-color 0.5s, padding 0.25s;
+          transition: background-color 0.5s, padding 0.25s;
 
   @include lg-min {
     padding: 15px 0;
+
     background-color: transparent;
   }
 
   .nav-link {
+    position: relative;
+
+    overflow: hidden;
+
+    @include lg-min {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     &::after {
       position: absolute;
       bottom: 0;
+
       height: 0;
+
       content: "";
+
       opacity: 0;
       background-color: $color-light;
 
       @include lg-min {
         left: 0;
+
         width: 100%;
       }
     }
-    @include lg-min {
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-    position: relative;
-    overflow: hidden;
   }
 }
 
@@ -38,13 +45,32 @@
 
 .navbar-brand {
   display: inline-block;
+
+  margin-right: 1rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+
+  white-space: nowrap;
+
   font-size: 1.25rem;
   line-height: inherit;
-  white-space: nowrap;
 }
 .navbar-nav {
   font-size: 1rem;
+}
+
+.header-navbar .nav-item:not(.active):hover .nav-link,
+.header-navbar .nav-item:not(.active):focus .nav-link {
+  color: #fefefe;
+}
+
+.header-navbar .nav-item:not(.active):hover .nav-link::after,
+.header-navbar .nav-item:not(.active):focus .nav-link::after {
+  height: 3px;
+
+  -webkit-transition: bottom 0.5s, opacity 0.5s;
+       -o-transition: bottom 0.5s, opacity 0.5s;
+          transition: bottom 0.5s, opacity 0.5s;
+
+  opacity: 1;
 }

@@ -82,12 +82,27 @@ a:hover, a:focus {
   font-size: 1rem;
 }
 
+.header-navbar .nav-item:not(.active):hover .nav-link,
+.header-navbar .nav-item:not(.active):focus .nav-link {
+  color: #fefefe;
+}
+
+.header-navbar .nav-item:not(.active):hover .nav-link::after,
+.header-navbar .nav-item:not(.active):focus .nav-link::after {
+  height: 3px;
+  -webkit-transition: bottom 0.5s, opacity 0.5s;
+  -o-transition: bottom 0.5s, opacity 0.5s;
+  transition: bottom 0.5s, opacity 0.5s;
+  opacity: 1;
+}
+
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
 body {
+  overflow-y: scroll;
   color: #545454;
   font-family: "Roboto", sans-serif;
 }
@@ -116,6 +131,10 @@ h6 {
 }
 
 @media (min-width: 992px) {
+  .header-navbar--scrolled {
+    padding: 0;
+    background-color: rgba(1, 1, 1, 0.85);
+  }
   .header-navbar {
     padding: 15px 0;
     background-color: transparent;
