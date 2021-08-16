@@ -168,6 +168,17 @@ a:hover, a:focus {
   text-align: center;
 }
 
+.feature {
+  margin-bottom: 7.5px;
+  padding-top: 7.5px;
+}
+.feature__title {
+  text-align: center;
+}
+.feature__description {
+  text-align: center;
+}
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,6 +411,25 @@ a:hover, a:focus {
   .features__description {
     margin-bottom: 45px;
   }
+  .feature__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80px;
+    height: 90px;
+    margin: 30px auto 60px;
+    color: #ffffff;
+    background: #ee3b24;
+    font-size: 2rem;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
   .gallery__description {
     margin-bottom: 45px;
   }
@@ -549,6 +579,25 @@ a:hover, a:focus {
 @media (max-width: 767.8px) {
   .features__description {
     margin-bottom: 30px;
+  }
+  .feature__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 68px;
+    height: 76.5px;
+    margin: 25.5px auto 51px;
+    color: #ffffff;
+    background: #ee3b24;
+    font-size: 1.5rem;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
   .gallery__description {
     margin-bottom: 30px;

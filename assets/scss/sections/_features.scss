@@ -52,3 +52,24 @@
     }
   }
 }
+
+.feature {
+  margin-bottom: 7.5px;
+  padding-top: 7.5px;
+
+  &__icon {
+    @include md-min {
+      @include icon;
+    }
+    @include md {
+      @include icon(34px, 1.5rem);
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+  }
+}
