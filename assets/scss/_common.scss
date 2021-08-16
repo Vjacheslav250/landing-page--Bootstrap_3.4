@@ -4,8 +4,6 @@ html {
 }
 
 body {
-  overflow-y: scroll;
-
   color: $color-gray;
 
   font-family: $font-main;
@@ -13,16 +11,7 @@ body {
 
 section {
   overflow: hidden;
-
   width: 100%;
-}
-
-h5 {
-  font-size: 1.125rem;
-}
-
-button:focus {
-  outline: none;
 }
 
 h1,
@@ -33,5 +22,22 @@ h5,
 h6 {
   color: $color-dark;
 
-  font-family: $font-main;
+  font-family: $font-header;
+}
+h5 {
+  font-size: 1.125rem;
+}
+
+button:focus {
+  outline: none;
+}
+a {
+  color: $color-dark;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    color: #ee3b24;
+  }
 }

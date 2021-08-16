@@ -1,7 +1,5 @@
 .header-navbar {
-  -webkit-transition: background-color 0.5s, padding 0.25s;
-       -o-transition: background-color 0.5s, padding 0.25s;
-          transition: background-color 0.5s, padding 0.25s;
+  transition: background-color 0.5s, padding 0.25s;
 
   @include lg-min {
     padding: 15px 0;
@@ -15,8 +13,8 @@
     overflow: hidden;
 
     @include lg-min {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: $gap;
+      padding-bottom: $gap;
     }
     &::after {
       position: absolute;
@@ -34,13 +32,13 @@
 
         width: 100%;
       }
+      @include lg {
+        left: 25%;
+
+        width: 50%;
+      }
     }
   }
-}
-
-.header-navbar--scrolled .active .nav-link {
-  color: #ee3b24 !important;
-  text-shadow: 0 0 1px #ee3b24;
 }
 
 .navbar-brand {
@@ -55,8 +53,16 @@
   font-size: 1.25rem;
   line-height: inherit;
 }
-.navbar-nav {
-  font-size: 1rem;
+
+.header-navbar .nav-item:not(.active):hover .nav-link::after,
+.header-navbar .nav-item:not(.active):focus .nav-link::after {
+  height: 3px;
+
+  -webkit-transition: bottom 0.5s, opacity 0.5s;
+  -o-transition: bottom 0.5s, opacity 0.5s;
+  transition: bottom 0.5s, opacity 0.5s;
+
+  opacity: 1;
 }
 
 .header-navbar .nav-item:not(.active):hover .nav-link,
@@ -64,13 +70,29 @@
   color: #fefefe;
 }
 
-.header-navbar .nav-item:not(.active):hover .nav-link::after,
-.header-navbar .nav-item:not(.active):focus .nav-link::after {
-  height: 3px;
+.header-navbar--scrolled {
+  @include lg-min {
+    padding: 0;
+    background-color: rgba($color-dark, 0.85);
+  }
 
-  -webkit-transition: bottom 0.5s, opacity 0.5s;
-       -o-transition: bottom 0.5s, opacity 0.5s;
-          transition: bottom 0.5s, opacity 0.5s;
+  .active {
+    .nav-link {
+      color: $color-accent !important;
+      text-shadow: 0 0 1px $color-accent;
 
-  opacity: 1;
+      &::after {
+        height: 3px;
+        opacity: 1;
+        background-color: $color-accent;
+
+        @include lg-min {
+          bottom: 10px;
+        }
+        @include lg {
+          bottom: 4px;
+        }
+      }
+    }
+  }
 }

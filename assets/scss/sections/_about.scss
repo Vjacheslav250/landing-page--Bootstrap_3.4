@@ -1,0 +1,45 @@
+.about {
+  display: flex;
+
+  min-height: 100vh;
+
+  flex-wrap: wrap;
+  align-content: center;
+  @include lg-min {
+    padding-top: $gap * 7;
+    padding-bottom: $gap * 6;
+  }
+  @include lg-md {
+    padding-top: $gap * 7;
+    padding-bottom: $gap * 5;
+  }
+  @include md-sm {
+    padding-top: $gap * 6;
+    padding-bottom: $gap * 4;
+  }
+  @include sm {
+    padding-top: $gap * 6;
+    padding-bottom: $gap * 3;
+  }
+
+  &__title {
+    text-align: center;
+
+    @include lg-min {
+      margin: 0 0 ($gap * 3);
+    }
+    @include lg-md {
+      margin: 0 0 ($gap * 2.5);
+    }
+    @include md-sm {
+      margin: 0 0 ($gap * 2);
+    }
+    @include sm {
+      margin: 0 0 ($gap * 1.5);
+    }
+  }
+
+  &__item {
+    margin-bottom: $gap * 2;
+  }
+}

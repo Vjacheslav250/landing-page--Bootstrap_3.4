@@ -1,0 +1,118 @@
+.advantages {
+  background-color: darken($color-light, 15%);
+
+  &__title {
+    text-align: center;
+
+    @include lg-min {
+      margin: 0 0 ($gap * 3);
+    }
+    @include lg-md {
+      margin: 0 0 ($gap * 2.5);
+    }
+    @include md-sm {
+      margin: 0 0 ($gap * 2);
+    }
+    @include sm {
+      margin: 0 0 ($gap * 1.5);
+    }
+  }
+
+  &__description {
+    text-align: center;
+
+    @include md-min {
+      margin-bottom: $gap * 3;
+    }
+    @include md {
+      margin-bottom: $gap * 2;
+    }
+  }
+
+  &__image {
+    min-height: 100vh;
+
+    background-position: 33% 50%;
+    background-size: cover;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    min-height: 100vh;
+
+    flex-wrap: wrap;
+    align-content: center;
+    @include lg-min {
+      padding-top: $gap * 7;
+      padding-bottom: $gap * 6;
+    }
+    @include lg-md {
+      padding-top: $gap * 7;
+      padding-bottom: $gap * 5;
+    }
+    @include md-sm {
+      padding-top: $gap * 6;
+      padding-bottom: $gap * 4;
+    }
+    @include sm {
+      padding-top: $gap * 6;
+      padding-bottom: $gap * 3;
+    }
+
+    @include xl-min {
+      > .row {
+        margin-right: $gap;
+        margin-left: $gap;
+      }
+    }
+    @include xl-lg {
+      > .row {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .container-fluid {
+    @include lg-md {
+      max-width: 720px;
+    }
+    @include md-sm {
+      max-width: 540px;
+    }
+  }
+}
+
+.advantage-item {
+  &__caption {
+    margin-bottom: $gap;
+  }
+
+  &__icon {
+    flex-grow: 0;
+
+    i {
+      margin-top: $gap / 2;
+
+      text-align: center;
+
+      color: $color-accent;
+
+      @include sm-min {
+        width: 60px;
+
+        font-size: 2.75rem;
+      }
+      @include sm {
+        width: 35px;
+
+        font-size: 2rem;
+      }
+    }
+  }
+}
