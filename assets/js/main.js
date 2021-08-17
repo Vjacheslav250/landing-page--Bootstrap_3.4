@@ -1,6 +1,25 @@
 (function ($) {
   let $navbar = $('#header-navbar');
+  let $btnBack2Top = $('#back2top');
 
+  const back2TopOffset = 700;
+  const back2TopAnimationDuration = 500;
+  const back2TopAnimationFunction = 'swing';
+  const back2Top = (pos) =>
+    pos >= back2TopOffset
+      ? $btnBack2Top.fadeIn(500)
+      : $btnBack2Top.fadeOut(500);
+
+  $btnBack2Top.on('click', () => {
+    $('html').animate(
+      {
+        scrollTop: 0
+      },
+      back2TopAnimationDuration,
+      back2TopAnimationFunction
+    );
+    return false;
+  });
 
   const headerClassOnScroll = 'header-navbar--scrolled';
   const headerScrollTrigger = 100;
@@ -11,7 +30,6 @@
       : $navbar.removeClass(headerClassOnScroll);
     back2Top($(window).scrollTop());
   });
-
 
   $navbar.onePageNav({
     currentClass: 'active',
@@ -42,5 +60,3 @@
   });
 
 })(jQuery);
-
-

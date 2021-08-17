@@ -24,6 +24,14 @@
   background-color: #ee3b24 !important;
 }
 
+.btn-outline-danger {
+  color: #ee3b24;
+  border-color: #ee3b24 !important;
+}
+.btn-outline-danger:hover, .btn-outline-danger:focus {
+  background-color: #ee3b24;
+}
+
 .header-navbar {
   -webkit-transition: background-color 0.5s, padding 0.25s;
   -o-transition: background-color 0.5s, padding 0.25s;
@@ -137,11 +145,11 @@ a:hover, a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
 }
 .about__title {
   text-align: center;
@@ -151,15 +159,15 @@ a:hover, a:focus {
 }
 
 .features {
-  background-color: #e5e5e5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #e5e5e5;
 }
 .features__title {
   text-align: center;
@@ -183,11 +191,11 @@ a:hover, a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
 }
 .gallery__title {
   text-align: center;
@@ -240,6 +248,12 @@ a:hover, a:focus {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 45px;
   height: 45px;
   -webkit-transition: top 0.5s;
@@ -247,12 +261,6 @@ a:hover, a:focus {
   transition: top 0.5s;
   color: #fefefe;
   background-color: #ee3b24;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .gallery-item__link:hover, .gallery-item__link:focus {
   color: #fefefe;
@@ -273,15 +281,15 @@ a:hover, a:focus {
 }
 
 .blog {
-  background-color: #ececec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #ececec;
 }
 .blog__title {
   text-align: center;
@@ -316,16 +324,16 @@ a:hover, a:focus {
   background-color: #fefefe;
 }
 .blog-item__post::before {
-  z-index: -1;
-  content: "";
-  -webkit-transition: background-color 0.25s;
-  -o-transition: background-color 0.25s;
-  transition: background-color 0.25s;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  content: "";
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
 }
 .blog-item__date {
   margin: 15px 0;
@@ -374,11 +382,11 @@ a:hover, a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 .advantage-item__caption {
@@ -393,6 +401,23 @@ a:hover, a:focus {
   margin-top: 7.5px;
   text-align: center;
   color: #ee3b24;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.contacts__title {
+  text-align: center;
+}
+.contacts__description {
+  text-align: center;
 }
 @media (min-width: 576px) {
   .gallery .container-fluid {
@@ -440,6 +465,9 @@ a:hover, a:focus {
     margin: 15px 0 0;
   }
   .advantages__description {
+    margin-bottom: 45px;
+  }
+  .contacts__description {
     margin-bottom: 45px;
   }
 }
@@ -500,6 +528,13 @@ a:hover, a:focus {
   .advantages__content {
     padding-top: 105px;
     padding-bottom: 90px;
+  }
+  .contacts {
+    padding-top: 105px;
+    padding-bottom: 90px;
+  }
+  .contacts__title {
+    margin: 0 0 45px;
   }
 }
 @media (min-width: 1200px) {
@@ -575,6 +610,13 @@ a:hover, a:focus {
   .advantages .container-fluid {
     max-width: 720px;
   }
+  .contacts {
+    padding-top: 105px;
+    padding-bottom: 75px;
+  }
+  .contacts__title {
+    margin: 0 0 37.5px;
+  }
 }
 @media (max-width: 767.8px) {
   .features__description {
@@ -613,6 +655,9 @@ a:hover, a:focus {
     margin: 15px 0 30px;
   }
   .advantages__description {
+    margin-bottom: 30px;
+  }
+  .contacts__description {
     margin-bottom: 30px;
   }
 }
@@ -654,6 +699,13 @@ a:hover, a:focus {
   }
   .advantages .container-fluid {
     max-width: 540px;
+  }
+  .contacts {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+  .contacts__title {
+    margin: 0 0 30px;
   }
 }
 @media (max-width: 575.8px) {
@@ -698,5 +750,12 @@ a:hover, a:focus {
   .advantage-item__icon i {
     width: 35px;
     font-size: 2rem;
+  }
+  .contacts {
+    padding-top: 90px;
+    padding-bottom: 45px;
+  }
+  .contacts__title {
+    margin: 0 0 22.5px;
   }
 }

@@ -44,3 +44,13 @@
 .bg-danger {
   background-color: #ee3b24 !important;
 }
+
+.btn-outline-danger {
+  color: $color-accent;
+  border-color: $color-accent !important;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
