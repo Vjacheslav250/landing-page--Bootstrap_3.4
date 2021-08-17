@@ -1,12 +1,12 @@
 .features {
-  background-color: darken($color-light, 10%);
-
   display: flex;
+  align-content: center;
+  flex-wrap: wrap;
 
   min-height: 100vh;
 
-  flex-wrap: wrap;
-  align-content: center;
+  background-color: darken($color-light, 10%);
+
   @include lg-min {
     padding-top: $gap * 7;
     padding-bottom: $gap * 6;

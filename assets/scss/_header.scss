@@ -59,8 +59,8 @@
   height: 3px;
 
   -webkit-transition: bottom 0.5s, opacity 0.5s;
-  -o-transition: bottom 0.5s, opacity 0.5s;
-  transition: bottom 0.5s, opacity 0.5s;
+       -o-transition: bottom 0.5s, opacity 0.5s;
+          transition: bottom 0.5s, opacity 0.5s;
 
   opacity: 1;
 }
@@ -73,6 +73,7 @@
 .header-navbar--scrolled {
   @include lg-min {
     padding: 0;
+
     background-color: rgba($color-dark, 0.85);
   }
 
@@ -83,6 +84,7 @@
 
       &::after {
         height: 3px;
+
         opacity: 1;
         background-color: $color-accent;
 

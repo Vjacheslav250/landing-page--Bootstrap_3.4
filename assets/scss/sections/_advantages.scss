@@ -42,11 +42,11 @@
 
   &__content {
     display: flex;
+    align-content: center;
+    flex-wrap: wrap;
 
     min-height: 100vh;
 
-    flex-wrap: wrap;
-    align-content: center;
     @include lg-min {
       padding-top: $gap * 7;
       padding-bottom: $gap * 6;
@@ -63,7 +63,6 @@
       padding-top: $gap * 6;
       padding-bottom: $gap * 3;
     }
-
     @include xl-min {
       > .row {
         margin-right: $gap;

@@ -1,10 +1,10 @@
 .gallery {
   display: flex;
+  align-content: center;
+  flex-wrap: wrap;
 
   min-height: 100vh;
 
-  flex-wrap: wrap;
-  align-content: center;
   @include lg-min {
     padding-top: $gap * 7;
     padding-bottom: $gap * 6;
@@ -21,7 +21,6 @@
     padding-top: $gap * 6;
     padding-bottom: $gap * 3;
   }
-
   @include sm-min {
     .container-fluid {
       padding-right: $gap * 2;
@@ -111,6 +110,8 @@
     top: -50%;
 
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     width: $gap * 3;
     height: $gap * 3;
@@ -119,9 +120,6 @@
 
     color: $color-light;
     background-color: $color-accent;
-
-    justify-content: center;
-    align-items: center;
 
     &:hover,
     &:focus {
