@@ -1,22 +1,22 @@
 (function ($) {
   let $navbar = $('#header-navbar');
-  let $btnBack2Top = $('#back2top');
+  let $btnStart1Page = $('#start1page');
 
-  const back2TopOffset = 700;
-  const back2TopAnimationDuration = 500;
-  const back2TopAnimationFunction = 'swing';
-  const back2Top = (pos) =>
-    pos >= back2TopOffset
-      ? $btnBack2Top.fadeIn(500)
-      : $btnBack2Top.fadeOut(500);
+  const start1PageOffset = 700;
+  const start1PageAnimationDuration = 500;
+  const start1PageAnimationFunction = 'swing';
+  const start1Page = (pos) =>
+    pos >= start1PageOffset
+      ? $btnStart1Page.fadeIn(500)
+      : $btnStart1Page.fadeOut(500);
 
-  $btnBack2Top.on('click', () => {
+  $btnStart1Page.on('click', () => {
     $('html').animate(
       {
         scrollTop: 0
       },
-      back2TopAnimationDuration,
-      back2TopAnimationFunction
+      start1PageAnimationDuration,
+      start1PageAnimationFunction
     );
     return false;
   });
@@ -28,7 +28,7 @@
     $(window).scrollTop() > headerScrollTrigger
       ? $navbar.addClass(headerClassOnScroll)
       : $navbar.removeClass(headerClassOnScroll);
-    back2Top($(window).scrollTop());
+    start1Page($(window).scrollTop());
   });
 
   $navbar.onePageNav({

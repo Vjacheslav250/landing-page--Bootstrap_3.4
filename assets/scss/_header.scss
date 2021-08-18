@@ -6,6 +6,35 @@
 
     background-color: transparent;
   }
+  @include lg {
+    background-color: rgba($color-dark, 0.85);
+  }
+
+  .nav-item {
+    &:not(.active) {
+      &:hover,
+      &:focus {
+        .nav-link {
+          color: $color-light;
+
+          &::after {
+            height: 3px;
+
+            transition: bottom 0.5s, opacity 0.5s;
+
+            opacity: 1;
+
+            @include lg-min {
+              bottom: 10px;
+            }
+            @include lg {
+              bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .nav-link {
     position: relative;
